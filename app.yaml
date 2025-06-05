@@ -1,0 +1,11 @@
+runtime: nodejs20
+handlers:
+  - url: /assets
+    static_dir: dist/assets
+
+  - url: /img
+    static_dir: dist/img
+
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html

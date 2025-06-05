@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+    @apply outline-none;
+}
+
+body {
+    @apply bg-dark-900 text-white;
+}
+
+.my-block {
+    @apply relative rounded-xl bg-block;
+}
+
+.balance {
+    @apply inline-block whitespace-nowrap before:mr-1.5 before:inline-block before:h-[1.15em] before:w-[1.15em] before:bg-[url(/img/usd.svg)] before:bg-contain before:bg-center before:bg-no-repeat before:align-text-bottom;
+}
+
+.balance-right {
+    @apply inline-block whitespace-nowrap after:ml-1.5 after:inline-block after:h-[1.15em] after:w-[1.15em] after:bg-[url(/img/usd.svg)] after:bg-contain after:bg-center after:bg-no-repeat after:align-text-bottom;
+}
+
+.balance-usd {
+    @apply inline-block whitespace-nowrap before:mr-1.5 before:inline-block before:h-[1.15em] before:w-[1.15em] before:bg-[url(/img/usd.svg)] before:bg-contain before:bg-center before:bg-no-repeat before:align-text-bottom;
+}
+
+.bet-settings-input-icon-usd {
+    @apply before:pointer-events-none before:absolute before:top-1/2 before:h-[1.15em] before:w-[1.15em] before:-translate-y-1/2 before:bg-[url(/img/usd.svg)] before:bg-contain before:bg-center before:bg-no-repeat before:align-text-bottom;
+}
+
+.btn {
+    @apply inline-block rounded-[0.6em] bg-500-gradient px-[1.5em] py-[0.65em] font-bold;
+}
+
+.icon-btn {
+    @apply flex h-9 w-9 items-center justify-center rounded-xl border border-white/70 bg-dark-600 p-1;
+}
+
+.my-slider[type='range'] {
+    @apply h-2 w-full cursor-pointer appearance-none bg-transparent;
+}
+
+/* Removes default focus */
+.my-slider[type='range']:focus {
+    @apply outline-none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+.my-slider[type='range']::-webkit-slider-runnable-track {
+    @apply h-2 rounded-full;
+}
+
+/* slider thumb */
+.my-slider[type='range']::-webkit-slider-thumb {
+    @apply -mt-[12px] h-8 w-8 appearance-none rounded bg-dark-600 bg-[url(/img/dice-slider-lines.svg)] outline outline-1 outline-dark-200/50;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+.my-slider[type='range']::-moz-range-track {
+    @apply h-2 rounded-full;
+}
+
+/* slider thumb */
+.my-slider[type='range']::-moz-slider-thumb {
+    @apply -mt-[12px] h-8 w-8 appearance-none rounded bg-[#232323] bg-[url(/img/dice-slider-lines.svg)] outline outline-1 outline-[#3A3A3A];
+}
+
+.my-slider-triangle {
+    @apply before:h-0 before:w-0 before:rotate-180 before:border-b-[12px] before:border-l-[8px] before:border-r-[8px] before:border-t-0 before:border-solid before:border-transparent before:border-b-dark-500;
+}
+
+.game-controller {
+    @apply relative rounded-md bg-block p-[0.18rem] backdrop:blur-sm before:absolute before:inset-0 before:rounded-[inherit] before:p-[0.18rem];
+}
+
+.game-controller::before {
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: destination-out;
+
+    background: rgba(34, 34, 34, 1);
+    background: linear-gradient(
+        180deg,
+        rgba(136, 136, 136, 0.03) 0%,
+        rgba(34, 34, 34, 1) 50%,
+        rgba(136, 136, 136, 0.03) 100%
+    );
+}
+
+.my-input {
+    @apply rounded-md bg-dark-500 px-3 py-2.5 font-sans text-sm font-normal leading-none placeholder:text-gray-secondary;
+}
+
+.my-input-dice {
+    @apply w-full rounded-xl bg-dark-500 p-2.5 font-poppins text-[0.625rem] font-semibold leading-none outline-none;
+}
+
+input[type='number'] {
+    @apply appearance-none;
+    -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    @apply m-0 appearance-none;
+}
+
+.my-input-dice-number-pr {
+    @apply pr-11;
+}
+
+.chat-scrollbar {
+    /* scrollbar-width: thin; */ /* 
+    scrollbar-color: #212121 transparent;
+    -ms-overflow-style: none; */
+}
+
+.chat-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+    background: #212121;
+    border: 2px solid #161616;
+    border-radius: 6px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+    background: none;
+}
+
+.chat-scrollbar::-webkit-scrollbar-button {
+    display: none;
+}
+
+.chat-scrollbar::-webkit-scrollbar-button:vertical:start:increment,
+.chat-scrollbar::-webkit-scrollbar-button:vertical:end:decrement,
+.chat-scrollbar::-webkit-scrollbar-button:horizontal:start:increment,
+.chat-scrollbar::-webkit-scrollbar-button:horizontal:end:decrement {
+    display: none;
+}
+
+.history-table-row-base {
+    @apply z-10 flex h-[3.25rem] items-center justify-center text-center text-[0.625rem] font-semibold leading-none text-[#5B5B5B] xl:text-sm;
+}
+
+.history-table-row-before {
+    @apply before:absolute before:left-0 before:-z-[2] before:h-[3.375rem] before:w-full before:rounded-lg before:xl:rounded-xl;
+}
+
+.history-table-row-after {
+    @apply after:absolute after:left-0 after:-z-[1] after:h-[3.375rem] after:w-full after:rounded-lg after:bg-700-gradient-stroke after:xl:rounded-xl;
+}
+
+.history-table-clickable {
+    @apply absolute left-0 z-20 h-[3.375rem] w-full -translate-y-px cursor-pointer rounded-lg xl:rounded-xl;
+}
+
+.history-table-popup-triangle {
+    @apply after:-z-[1] after:h-0 after:w-0 after:border-b-[31px] after:border-l-[16px] after:border-r-[16px] after:border-t-0 after:border-solid after:border-transparent after:border-b-dark-650;
+}
+
+.label-field__wrapper {
+    @apply flex flex-nowrap items-center rounded-lg bg-dark-500 p-2.5 text-xs;
+}
+
+.label-field__label {
+    @apply mr-2 text-white/40;
+}
+
+.label-field__text {
+    @apply flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-xs text-white;
+}
