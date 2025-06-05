@@ -25,7 +25,7 @@ function listGames() {
     const games = [
         { name: 'Dice', path: '/dice' },
         { name: 'Keno', path: '/keno' },
-        { name: 'Hilo', path: '/hilo' },
+        { name: 'Hilo', path: 'test/hilo' },
     ]
 
     return (
